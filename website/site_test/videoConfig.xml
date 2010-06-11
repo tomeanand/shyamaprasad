@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<Browne>
+	<videolist>
+		<video id="1" title="Arisia" path="Arisiabrown001.flv"><![CDATA[Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce sed leo. Ut aliquam. Maecenas gravida urna ut lorem. Aliquam orci. Phasellus at elit nec tortor porttitor gravida. Nunc malesuada nisi non eros. Morbi euismod, diam vitae sodales ornare, elit diam sollicitudin sem, vitae porttitor purus nisi ut ante.]]></video>
+		<video id="2" title="Axe Army Card" path="AxeArmyCardbrown001.flv"><![CDATA[Sed lectus. Maecenas eget lorem. Pellentesque volutpat ante. Vestibulum porta convallis nulla. Mauris semper. Nullam lectus mauris, venenatis vitae, ultricies quis, imperdiet eget, justo. Aliquam vitae turpis nec sem imperdiet tristique. ]]></video>
+		<video id="3" title="Axe Change" path="AxeChangebrown001.flv"><![CDATA[Cras lectus elit, gravida in, hendrerit vel, hendrerit at, orci. Sed mattis. Donec at libero sit amet massa consectetuer nonummy. Integer sollicitudin. Integer mollis massa ac augue mattis elementum.]]></video>
+		<video id="4" title="Bajaj Wave" path="BajajWavebrown001.flv"><![CDATA[Sed hendrerit tempus lacus. Etiam ornare risus nec ligula. Fusce et nibh. Aliquam orci. Suspendisse tempor convallis felis. Mauris blandit ipsum a lacus. Nulla facilisi. ]]></video>
+		<video id="5" title="Hutch Jokes" path="HutchJokesbrown001.flv"><![CDATA[Sed nec felis ut nisl interdum molestie. Nulla facilisi. Nunc sem elit, elementum sit amet, tincidunt vel, gravida ut, magna. Duis malesuada, ipsum in tristique placerat, lorem tortor bibendum neque,]]></video>
+		<video id="6" title="Hutch Ringtones" path="HutchRingtonesbrown001.flv"><![CDATA[Lectus. Maecenas eget lorem. Pellentesque volutpat ante. Vestibulum porta convallis nulla.]]></video>
+		<video id="7" title="Integriti" path="Integritibrown001.flv"><![CDATA[Nunc malesuada nisi non eros. Morbi euismod, diam vitae sodales ornare, elit diam sollicitudin sem, vitae porttitor purus nisi ut ante.]]></video>
+		<video id="8" title="Kirloskar" path="Kirloskarbrown001.flv"><![CDATA[Sed nec felis ut nisl interdum molestie. Nulla facilisi. Nunc sem elit, elementum sit amet, tincidunt vel,]]></video>
+		<video id="9" title="Parachute" path="Parachutebrown001.flv"><![CDATA[t aliquam. Maecenas gravida urna ut lorem. Aliquam orci. Phasellus at elit nec tortor porttitor gravida. Nunc malesuada nisi non eros.]]></video>
+		<video id="10" title="Serovo 4T" path="Serovo4tbrown001.flv"><![CDATA[Ipsum dolor sit amet, consectetuer adipiscing elit. Fusce sed leo. Ut aliquam. Maecenas gravida urna ut lorem. Aliquam orci. Phasellus at elit nec tortor porttitor gravida. Nunc malesuada nisi non eros. Morbi euismod, diam vitae sodales ornare, elit diam sollicitudin sem, vitae porttitor purus nisi ut ante.]]></video>
+		<video id="11" title="Tata Salt" path="TataSaltbrown001.flv"><![CDATA[]]></video>
+		<video id="12" title="Times Now" path="TimesNowbrown001.flv"><![CDATA[Lpsum dolor sit amet, consectetuer adipiscing elit. Fusce sed leo. Ut aliquam. Maecenas gravida urna ut lorem. Aliquam orci. Phasellus at elit nec tortor porttitor gravida. Nunc malesuada nisi non eros. Morbi euismod, diam vitae sodales ornare, elit diam sollicitudin sem, vitae porttitor purus nisi ut ante.]]></video>
+	</videolist>
+	
+	<brownelist>
+		<video id="1" title="BNHS Muslim" path="BNHSMuslim.flv"><![CDATA[Yahoo! hehe]]></video>
+		<video id="2" title="Close-up" path="close-up.flv"></video>
+		<video id="3" title="Gelusil Foodball1" path="GelusilFoodball1.flv"></video>
+		<video id="4" title="Gelusil Pub" path="GelusilPub.flv"></video>
+		<video id="5" title="Godrej" path="Godre.flv"></video>
+		<video id="6" title="HLL Axe" path="HLLAxe1.flv"></video>
+		<video id="7" title="HLL Shirt" path="HLLShirt.flv"></video>
+		<video id="8" title="ILFS Copycat" path="ILFSCopycat.flv"></video>
+		<video id="9" title="Paanch" path="Paanch.flv"></video>
+		<video id="10" title="Pepsodent" path="Pepsodent1.flv"></video>
+		<video id="11" title="Population" path="Population.flv"></video>
+	</brownelist>
+	
+	<imagelist>
+		<image id="1" path="http://www.shyamaprasad.com/videos/001.jpg"><![CDATA[Lpsum dolor sit amet, consectetuer adipiscing el]]></image>
+		<image id="2" path="http://www.shyamaprasad.com/videos/002.jpg"><![CDATA[isi non eros. Morbi euismod, di]]></image>
+		<image id="3" path="http://www.shyamaprasad.com/videos/003.jpg"><![CDATA[t, gravida in, hendrerit vel, he]]></image>
+		<image id="4" path="http://www.shyamaprasad.com/videos/004.jpg"><![CDATA[sum dolor sit amet, consec]]></image>
+		<image id="5" path="http://www.shyamaprasad.com/videos/005.jpg"><![CDATA[uada nisi non eros. Morbi euismod]]></image>
+		<image id="6" path="http://www.shyamaprasad.com/videos/006.jpg"><![CDATA[sit amet, consectetuer ad]]></image>
+		<image id="7" path="http://www.shyamaprasad.com/videos/007.jpg"><![CDATA[aecenas eget lorem. Pellentesque]]></image>
+		<image id="8" path="http://www.shyamaprasad.com/videos/008.jpg"><![CDATA[ravida in, hendrerit vel, hendre]]></image>
+		<image id="9" path="http://www.shyamaprasad.com/videos/009.jpg"><![CDATA[nisi non eros. Morbi euismod, diam ]]></image>
+		<image id="10" path="http://www.shyamaprasad.com/videos/010.jpg"><![CDATA[dolor sit amet, consectetuer adipiscing elit. Fus]]></image>
+	</imagelist>
+	
+	<firstPlay></firstPlay>
+	<firstLoad>1,2</firstLoad>
+	<path>http://www.shyamaprasad.com/videos/</path>
+	<shadow>true</shadow>
+	
+</Browne>

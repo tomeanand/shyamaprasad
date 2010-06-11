@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script>
+<!--
+var dragapproved=false
+var minrestore=0
+var initialwidth,initialheight
+var ie5=document.all&&document.getElementById
+var ns6=document.getElementById&&!document.all
+
+function iecompattest(){
+return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function drag_drop(e){
+if (ie5&&dragapproved&&event.button==1){
+document.getElementById("dwindow").style.left=tempx+event.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+event.clientY-offsety+"px"
+}
+else if (ns6&&dragapproved){
+document.getElementById("dwindow").style.left=tempx+e.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+e.clientY-offsety+"px"
+}
+}
+
+function initializedrag(e){
+offsetx=ie5? event.clientX : e.clientX
+offsety=ie5? event.clientY : e.clientY
+document.getElementById("dwindowcontent").style.display="none" //extra
+tempx=parseInt(document.getElementById("dwindow").style.left)
+tempy=parseInt(document.getElementById("dwindow").style.top)
+
+dragapproved=true
+document.getElementById("dwindow").onmousemove=drag_drop
+}
+
+function loadwindow(url,width,height){
+if (!ie5&&!ns6)
+window.open(url,"","width=width,height=height,scrollbars=0")
+else{
+var int_left;
+var int_top;
+if(screen.width == 800)	{
+int_left = 20
+int_top = 60
+}
+if(screen.width == 1024)	{
+int_left = 60
+int_top = 140
+}
+if(screen.width == 1152)	{
+int_left = 100
+int_top = 180
+}
+
+document.getElementById("dwindow").style.display=''
+document.getElementById("dwindow").style.width=initialwidth=width+"px"
+document.getElementById("dwindow").style.height=initialheight=height+"px"
+document.getElementById("dwindow").style.left=int_left*2+"px" //initial left
+//document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+30+"px"
+//alert("::"+int_top)
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+int_top+"px"
+document.getElementById("cframe").src=url
+}
+}
+
+function maximize(){
+if (minrestore==0){
+minrestore=1 //maximize window
+document.getElementById("maxname").setAttribute("src","restore.gif")
+document.getElementById("dwindow").style.width=ns6? window.innerWidth-20+"px" : iecompattest().clientWidth+"px"
+document.getElementById("dwindow").style.height=ns6? window.innerHeight-20+"px" : iecompattest().clientHeight+"px"
+}
+else{
+minrestore=0 //restore window
+document.getElementById("maxname").setAttribute("src","max.gif")
+document.getElementById("dwindow").style.width=initialwidth
+document.getElementById("dwindow").style.height=initialheight
+}
+document.getElementById("dwindow").style.left=ns6? window.pageXOffset+"px" : iecompattest().scrollLeft+"px"
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset+"px" : iecompattest().scrollTop+"px"
+}
+
+function closeit(){
+document.getElementById("dwindow").style.display="none"
+}
+
+function stopdrag(){
+dragapproved=false;
+document.getElementById("dwindow").onmousemove=null;
+document.getElementById("dwindowcontent").style.display="" //extra
+}
+function loader()	{
+alert("::"+this.screen.width);
+}
+
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+<title>Shyamaprasad.com :: The Show Goes On</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="images/shyam_style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url('images/bg_common_out.gif');
+}
+-->
+</style>
+<meta name="keywords" content="Richard Stanley, Sashi Warrier,Stephen Berkoff,David Millbern, Heather Prete, Irfan Khan,Nandana Sen, Harish Patel, Vineeth,Mita Vasisht Ashok Mandanna,Ganga Prasad Vimal ,Torben Forsberg,Nakul Kamte,Sreekar Prasad,Thota Tarani,Tennessee Williams, The Glass Menagerie,Pritviraj , Sheela, Geetu Mohandas, Tom George, Sreelekha Chatterjee,Raja Unnithan, S. Kumar,Tom George,Akale-OST,Khasak, Khasakkinte Ithihasam ,O V Vijayan, Mathrubhumi Weekly, Malabar village, Enlight">
+</head>
+<body bgcolor="ACA88D" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_displayStatusMsg('www.shyamaprasad.com');return document.MM_returnValue"> 
+<div id="dwindow" style="position:absolute; cursor:hand; left:573px; top:216px; display:none; height: 230; background-image: url('images/bg_basic.gif'); layer-background-image: url(images/bg_basic.gif); width: 312; border: 1px none #000000" onMousedown="initializedrag(event)" onMouseup="stopdrag()" onSelectStart="return false"> 
+  <div align="left"> 
+    <table width="312" border="0" cellpadding="0" cellspacing="0"> 
+      <tr valign="top"> 
+        <td colspan="2" background="images/bg_ttl_shaym.gif"><img src="images/transparent.gif" width="1" height="4"></td> 
+      </tr> 
+      <tr valign="top" background="images/bg_basic.gif"> 
+        <td width="428"><img src="images/transparent.gif" width="200" height="1"></td> 
+        <td width="70"><img src="images/icon_window_close.gif" width="42" height="10" vspace="2" onClick="closeit()"></td> 
+      </tr> 
+    </table> 
+    <img src="images/transparent.gif" width="125" height="1"></div> 
+  <div id="dwindowcontent" style="height:100%"> 
+    <iframe id="cframe" src="" width=100% height=100% frameborder="0"></iframe> 
+  </div> 
+</div> 
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bg_common.gif"> 
+  <tr> 
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td valign="top"><table width="500" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td width="0%"><img src="images/transparent.gif" width="1" height="20"></td> 
+                <td width="4%"><img src="images/transparent.gif" width="14" height="1">-</td> 
+                <td width="3%">--</td> 
+                <td width="93%" class="breadCrumb"><a href="home.htm" class="breadCrumb">You are in Home</a> / The Show Goes On</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+        <tr> 
+          <td valign="top" background="images/bg_topBlue.gif"><table width="780" border="0" cellpadding="0" cellspacing="0"> 
+              <tr valign="top"> 
+                <td width="111"><a href="onmovies.htm"><img src="images/nav_onmovie.gif" alt="On Movies" width="111" height="36" border="0"></a></td> 
+                <td width="149"><a href="sml_screen.htm"><img src="images/nav_sspics.gif" alt="Small Screen Pics" width="149" height="36" border="0"></a></td> 
+                <td width="80"><a href="movies.htm"><img src="images/nav_movie.gif" alt="Movies" width="80" height="36" border="0"></a></td> 
+                <td width="80"><a href="awards.htm"><img src="images/nav_awards.gif" alt="Awards" width="80" height="36" border="0"></a></td> 
+                <td width="110"><a href="news.htm"><img src="images/nav_news.gif" alt="In the News" width="110" height="36" border="0"></a></td> 
+                <td width="85"><a href="life_etc.htm"><img src="images/nav_life.gif" alt="Life Etc" width="85" height="36" border="0"></a></td> 
+                <td width="165"><a href="show_goes.htm"><img src="images/nav_show.gif" alt="The Show Goes on" width="165" height="36" border="0"></a></td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+        <tr> 
+          <td valign="top"><table width="780" border="0" cellpadding="0" cellspacing="0"> 
+              <tr valign="top"> 
+                <td width="222"><img src="images/small_screen/img_news.jpg" width="780" height="61"></td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+        <tr> 
+          <td valign="top" background="images/bg_ttl_shaym_inner.gif" class="iconTxt"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td width="40%"><img src="images/ttl_shyamcom_inner.gif" width="315" height="21"></td> 
+                <td width="47%"><img src="images/ttl_show.gif" width="216" height="21"></td> 
+                <td width="13%" class="txtBlack"><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td width="50%"><a href="home.htm" class="txtBlack">HOME<img src="images/icon_home.gif" alt="Home" width="10" height="8" hspace="5" border="0"></a></td> 
+                      <td width="50%"><a href="mailto:shyamaprasadr@gmail.com"><img src="images/icon_mail.gif" alt="shyamaprasadr@gmail.com" width="23" height="9" border="0"></a></td> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <tr> 
+    <td valign="top"><table width="780" border="0" cellspacing="0" cellpadding="0"> 
+        <tr> 
+          <td><img src="images/transparent.gif" width="1" height="30"></td> 
+        </tr> 
+        <tr valign="top"> 
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td width="67%" class="txtBlack1">&nbsp;</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+        <tr> 
+          <td valign="top"> <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+              <tr> 
+                <td width="32%">&nbsp;</td> 
+                <td width="1%"><img src="images/transparent.gif" width="15" height="1"></td> 
+                <td width="50%">&nbsp;</td> 
+                <td width="17%">&nbsp;</td> 
+              </tr> 
+              <tr> 
+                <td align="right" valign="top" class="shadowShyam"><table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_movies_01.jpg" width="123" height="83"></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_movies_02.jpg" width="123" height="78"></td> 
+                    </tr> 
+                  </table></td> 
+                <td>&nbsp;</td> 
+                <td valign="top" class="txtBlue1"> <p><strong>BOKSHU - The Myth </strong><span class="txtBlackItalic">(Awaiting international release)</span><br> 
+                    <br> 
+                    The mystery of the missing Metcalf. An adventurous daughter in search of her dead father. Stranded in a strange land, stalked by the Bloodthirsty Bokshu. A stone temple priest bathing naked with the goddess of desire. The eternal war between lust and loyalty. Bodies falling like dry leaves in autumn, with no sign of the brutal killer. Animal genius but do animals lurk under human skin? A journey through Jaled in search of the truth. </p> 
+                  <p>Is it the truth or is it an illusion? Is there a thin line between fact and fiction? Is myth of any consequence? How far will the daughter go to save her father? Is there an end or is it the beginning?</p> 
+                  <p>All the ingredients for a psychological suspense thriller, developed by Shyama Prasad, Richard Stanley and Sashi Warrier from the original novel by Ganga Prasad Vimal. </p> 
+                  <p>Executive Producer Dr. M P S Prasad and Director Shyama Prasad with the extremely talented international cast and crew have rendered this myth of the Bokshu into a blockbuster movie. From the 500-year-old ruins of Hampi, to the snow peaks of the Himalayas, to the crystal waterfalls of Shivanasamudra and monumental stone temples across the Indian subcontinent, this film is rich in visual content with a plot that grips you throughout.<br> 
+                    <br> 
+                    <strong>Cast</strong><br> 
+                    Stephen Berkoff,David Millbern, Heather Prete, Irfan Khan<br> 
+                    Nandana&nbsp;Sen, Harish Patel, Vineeth,Mita Vasisht Ashok Mandanna</p> 
+                  Based on the celebrated Hindi novel by <strong>Ganga Prasad Vimal</strong> <strong><br> 
+                  Screenplay</strong> Richard Stanley, Sashi Warrier, Shyamaprasad<br> 
+                  <strong>Director of Photography</strong> Torben Forsberg<br> 
+                  <strong>Production Designer</strong> Thota Tarani<br> 
+                  <strong>Sound</strong> Nakul Kamte<br> 
+                  <strong>Editing</strong> Sreekar Prasad <br> 
+                  <strong>Director</strong> Shyamaprasad <br> 
+                  <br> 
+                  <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF"> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_09.htm',312,230)"><img src="images/popups/popup_bokshu_012.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_10.htm',312,230)"><img src="images/popups/popup_bokshu_011.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_03.htm',312,230)"><img src="images/popups/popup_bokshu_003.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_04.htm',312,230)"><img src="images/popups/popup_bokshu_004.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_05.htm',312,230)"><img src="images/popups/popup_bokshu_005.jpg" width="75" height="49" border="0"></a></td> 
+                    </tr> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_06.htm',312,230)"><img src="images/popups/popup_bokshu_006.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_07.htm',312,230)"><img src="images/popups/popup_bokshu_007.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_08.htm',312,230)"><img src="images/popups/popup_bokshu_008.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_bokshu_01.htm',312,230)"><img src="images/popups/popup_bokshu_009.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><strong><a href="javascript:loadwindow('windows/popup_bokshu_02.htm',312,230)"><img src="images/popups/popup_bokshu_010.jpg" width="75" height="49" border="0"></a></strong></td> 
+                    </tr> 
+                  </table> 
+                  <strong><a name="akale"><br> 
+                  </a></strong><br> </td> 
+                <td valign="top" class="txtBlue1">&nbsp;</td> 
+              </tr> 
+              <tr> 
+                <td colspan="4" align="right" valign="top" class="shadowShyam"><table width="80%" border="0" cellpadding="0" cellspacing="0" background="images/bg_line.gif"> 
+                    <tr> 
+                      <td valign="top"><img src="images/transparent.gif" width="658" height="1"></td> 
+                    </tr> 
+                  </table></td> 
+              </tr> 
+              <tr> 
+                <td align="right" valign="top" class="shadowShyam"><br> 
+                  <br> 
+                  <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_akale_01.jpg" width="123" height="83"></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_akale_02.jpg" width="123" height="79"></td> 
+                    </tr> 
+                  </table></td> 
+                <td align="center"> <p>&nbsp;</p> 
+                  <p>&nbsp;</p></td> 
+                <td valign="top" class="txtBlue1"><strong><br> 
+                  <br> 
+                  AKALE - At A Distance</strong>, <br> 
+                  is inspired by the American classic play by Tennessee Williams- The Glass Menagerie. <br> 
+                  <br> 
+                  Akale is set in the seventies in a shabby seaside house occupied by Margaret Evans and her two adult children: shy, fragile Rosa, and Neil, a restless, poetic soul trapped in a stifling factory job. Niel&#8217;s dilemma forms a central conflict of the film, as he faces an agonizing choice between responsibility for his family and living his own life. <br> 
+                  <br>
+                  Neil Evans narrates this, revisiting a time when his family 
+                  longs to escape their meager existence by creating idealized 
+                  fantasy worlds. A dream-like, illusory atmosphere help to create 
+                  a powerful representation of family, memory, and loss.<br> 
+                  <br> 
+                  Elegant juxtaposition of the humorous and the tragic, lonely characters, and dark sensibilities explores ways of using the medium of cinema to depict the interior life and memories of a character. <br> 
+                  <br> 
+                  <br> 
+                  <strong>Cast </strong><br> 
+                  Pritviraj , Sheela, Geetu Mohandas, Tom George, <br>
+                  Sreelekha Mitra<br> 
+                  <br> 
+                  <strong>Director of Photography</strong> S. Kumar <br> 
+                  <strong>Art Director</strong> Raja Unnithan <br> 
+                  <strong>Costumes</strong> Cukku Parameswaran <br> 
+                  <strong>Make up</strong> Joe Koratty <br> 
+                  <strong>Music</strong> M. Jayachandran <br> 
+                  <strong>Sound</strong> Harikumar <br> 
+                  <strong>Editing</strong> Vinod Sukumaran <br> 
+                  <strong>Produced</strong> by Tom George <br> 
+                  <strong>Distributed</strong> by Kolath Films <br> 
+                  <br> 
+                  <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF"> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_10.htm',312,230)"><img src="images/popups/popup_akale_010.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_07.htm',312,230)"><img src="images/popups/popup_akale_007.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_06.htm',312,230)"><img src="images/popups/popup_akale_006.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_03.htm',312,230)"><img src="images/popups/popup_akale_003.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_04.htm',312,230)"><img src="images/popups/popup_akale_004.jpg" width="75" height="49" border="0"></a></td> 
+                    </tr> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_05.htm',312,230)"><img src="images/popups/popup_akale_005.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_08.htm',312,230)"><img src="images/popups/popup_akale_008.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_01.htm',312,230)"><img src="images/popups/popup_akale_001.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_akale_09.htm',312,230)"><img src="images/popups/popup_akale_009.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><strong><a href="javascript:loadwindow('windows/popup_akale_02.htm',312,230)"><img src="images/popups/popup_akale_002.jpg" width="75" height="49" border="0"></a></strong></td> 
+                    </tr> 
+                  </table> 
+                  <br> 
+                  <strong><br> 
+                  Akale <font color="#FFFFFF">Music Video</font></strong><strong><br> 
+                  </strong> 
+                  <table border="0" cellpadding="0" cellspacing="0"> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><img src="images/movies/img_akale_03.jpg" width="76" height="49" vspace="2"></td> 
+                      <td><img src="images/movies/img_akale_04.jpg" width="76" height="49" vspace="2"></td> 
+                      <td><img src="images/movies/img_akale_05.jpg" width="78" height="49" vspace="2"></td> 
+                    </tr> 
+                  </table> 
+                  <br> 
+                  Watch out for the videos of the Akale-OST directed by <br> 
+                  <strong>Balak </strong>of Squareminds.<br> 
+                  <br>
+                  <a href="http://malayalam.galatta.com/entertainment/movies/malayalam/released/akale/" target="_blank" class="smallScr">Akale 
+                  - Review</a><br>
+                  <a href="http://news.newkerala.com/cinema-news-india/index.php?action=fullnews&showcomments=1&id=22008" target="_blank" class="smallScr"> 
+                  'Akale' On human fragility</a><br>
+                  <a href="http://www.malumovies.com/" target="_blank" class="smallScr">A 
+                  Classic Movie</a><br>
+                  <a href="http://www.musicindiaonline.com/n/m/interviews___malayalam/10/" target="_blank" class="smallScr">An 
+                  Interview with - Shyamaprasad, Director</a><br>
+                  <a href="http://sify.com/movies/malayalam/review.php?id=13488410&ctid=5&cid=2428" target="_blank" class="smallScr">Shyamaprasad's 
+                  latest offering</a> <br>
+                  <a href="http://www.keralaonline.com/defaultadl.asp" target="_blank" class="smallScr">A 
+                  must- see film</a> <br>
+                  <a href="http://www.screenindia.com/fullstory.php?content_id=8265" target="_blank" class="smallScr">Shyamaprasad's 
+                  labour of love</a><br>
+                  <a href="http://news.newkerala.com/cinema-news-india/" target="_blank" class="smallScr">A 
+                  poignant tale</a><br>
+                  <a href="http://desitalk.newsindia-times.com/2004/06/04/cinema-index.html" target="_blank" class="smallScr">Shyamaprasad 
+                  makes a comeback</a> <br>
+                  <a href="http://www.hinduonnet.com/thehindu/mp/2004/06/03/chenindx.htm" target="_blank" class="smallScr">In 
+                  a class of its own</a> <br>
+                  <a href="http://www.newkerala.com/news-daily/news/features.php?action=fullnews&showcomments=1&id=22669" target="_blank" class="smallScr">A 
+                  Dream come true for the director</a> <br>
+                  <a href="http://www.nowrunning.com/cgi-bin/movies/akale.asp" target="_blank" class="smallScr"> 
+                  Akale - MALAYALAM Movie - Preview, Songs, Stills, Review ...</a> 
+                  <br><br>
+<br></td> 
+                <td valign="top" class="txtBlue1">&nbsp;</td> 
+              </tr> 
+              <tr> 
+                <td colspan="4" align="right" valign="top"><table width="80%" border="0" cellpadding="0" cellspacing="0" background="images/bg_line.gif"> 
+                    <tr> 
+                      <td valign="top"><img src="images/transparent.gif" width="658" height="1"></td> 
+                    </tr> 
+                  </table></td> 
+              </tr>
+              <tr> 
+                <td align="right" valign="top" class="shadowShyam"><br> 
+                  <br> 
+                  <table border="0" cellspacing="0" cellpadding="0"> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_ullurkam_01.jpg" width="123" height="78"></td> 
+                    </tr> 
+                    <tr> 
+                      <td valign="top"><img src="images/movies/img_ullurkam_02.jpg" width="123" height="78"></td> 
+                    </tr> 
+                  </table></td> 
+                <td>&nbsp;</td> 
+                <td valign="top" class="txtBlue1"><strong><br> 
+                  <br>
+                  Ullurukkam</strong> (Touched) <span class="txtBlackItalic">(Awaiting 
+                  national telecast)</span> 
+                  <p>Set against the background of superstition and sorcery, many socio-religious factors of the Moslem life in the Malabar village (Kerala, South India) where little Kuttimon lives, operate as the members of Kuttimon&#8217;s family work out their destinies. </p> 
+                  <p>With his acute and sensitive perception of people, events and the natural world, Kuttimon understands the significance of the happenings around him only partially. But being a child who has been nurtured on the tales of spirits and snakes and their power over human beings, Kuttimon cannot escape being lured by them.<strong><br> 
+                    <br> 
+                    Cast<br> 
+                    </strong>Abhilash, Jamin Mayin, Rajesh Hebbar, Tom George, Sainudeen <br> 
+                    Padmanabhan Thampi, Yusaf Haji, Sudha Suresh, Santhini Kalidas<br> 
+                    <br> 
+                    <strong>Written &amp; Directed</strong> by Shyamaprasad<br> 
+                    <strong>Story</strong> by N.P.Mohammed<br> 
+                    <strong>Director of Photography</strong> Shamdut<br> 
+                    <strong>Editing</strong> Vinod Sukumaran<br> 
+                    <strong>Sound Design</strong> C.R.Chandran<br> 
+                    <strong>Art Director</strong> Rajagopal<br> 
+                    <strong>Produced</strong> by <br> 
+                    Enlight &#8211;Shyamaprasad Productions for Doordarshan - 2003<br> 
+                    <br> 
+                  </p> 
+                  <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF"> 
+                    <tr valign="top" background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_01.htm',312,230)"><img src="images/popups_small/popup_ullur_001.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_02.htm',312,230)"><img src="images/popups_small/popup_ullur_002.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_03.htm',312,230)"><img src="images/popups_small/popup_ullur_003.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_04.htm',312,230)"><img src="images/popups_small/popup_ullur_004.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_05.htm',312,230)"><img src="images/popups_small/popup_ullur_005.jpg" width="75" height="49" border="0"></a></td> 
+                    </tr> 
+                  </table> 
+                  <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF"> 
+                    <tr background="images/bg_common_out.gif"> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_06.htm',312,230)"><img src="images/popups_small/popup_ullur_006.jpg" width="75" height="49" border="0"></a></td> 
+                      <td><a href="javascript:loadwindow('windows/popup_ullurukkam_07.htm',312,230)"><img src="images/popups_small/popup_ullur_007.jpg" width="75" height="49" border="0"></a></td> 
+                    </tr> 
+                  </table> 
+                  <p>&nbsp;</p> 
+                  <p>&nbsp;</p> 
+                  <p>&nbsp; </p></td> 
+                <td valign="top" class="txtBlue1">&nbsp;</td> 
+              </tr> 
+              <tr> 
+                <td align="right" valign="top">&nbsp;</td> 
+                <td>&nbsp;</td> 
+                <td valign="top"></td> 
+                <td valign="top">&nbsp;</td> 
+              </tr> 
+            </table></td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+  <tr> 
+    <td align="center" valign="middle" background="images/bg_topBlue.gif" class="footer"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer"> 
+        <tr> 
+          <td><img src="images/transparent.gif" width="1" height="30"></td> 
+          <td>&copy; 2004 All Rights Reserved Shyamaprasad.com</td> 
+        </tr> 
+      </table></td> 
+  </tr> 
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5670090-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

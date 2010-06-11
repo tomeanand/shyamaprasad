@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/small_screen.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Shyamaprasad.com :: Small Screen Pics - Lost Leaves</title>
+<!-- InstanceEndEditable --> 
+<script>
+<!--
+var dragapproved=false
+var minrestore=0
+var initialwidth,initialheight
+var initialFlashwidth,initialFlashheight
+var ie5=document.all&&document.getElementById
+var ns6=document.getElementById&&!document.all
+
+function iecompattest(){
+return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function drag_drop(e){
+if (ie5&&dragapproved&&event.button==1){
+document.getElementById("dwindow").style.left=tempx+event.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+event.clientY-offsety+"px"
+}
+else if (ns6&&dragapproved){
+document.getElementById("dwindow").style.left=tempx+e.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+e.clientY-offsety+"px"
+}
+}
+
+function initializedrag(e){
+offsetx=ie5? event.clientX : e.clientX
+offsety=ie5? event.clientY : e.clientY
+document.getElementById("dwindowcontent").style.display="none" //extra
+tempx=parseInt(document.getElementById("dwindow").style.left)
+tempy=parseInt(document.getElementById("dwindow").style.top)
+
+dragapproved=true
+document.getElementById("dwindow").onmousemove=drag_drop
+}
+
+function loadwindow(url,width,height){
+if (!ie5&&!ns6)
+window.open(url,"","width=width,height=height,scrollbars=0")
+else{
+var int_left;
+var int_top;
+if(screen.width == 800)	{
+int_left = 20
+int_top = 60
+}
+if(screen.width == 1024)	{
+int_left = 60
+int_top = 140
+}
+if(screen.width == 1152)	{
+int_left = 100
+int_top = 180
+}
+document.getElementById("dwindow").style.display=''
+document.getElementById("dwindow").style.width=initialwidth=width+"px"
+document.getElementById("dwindow").style.height=initialheight=height+"px"
+document.getElementById("dwindow").style.left=int_left*2+"px" //initial left
+//document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+30+"px"
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+int_top+"px"
+document.getElementById("cframe").src=url
+}
+}
+
+function maximize(){
+if (minrestore==0){
+minrestore=1 //maximize window
+document.getElementById("maxname").setAttribute("src","restore.gif")
+document.getElementById("dwindow").style.width=ns6? window.innerWidth-20+"px" : iecompattest().clientWidth+"px"
+document.getElementById("dwindow").style.height=ns6? window.innerHeight-20+"px" : iecompattest().clientHeight+"px"
+}
+else{
+minrestore=0 //restore window
+document.getElementById("maxname").setAttribute("src","max.gif")
+document.getElementById("dwindow").style.width=initialwidth
+document.getElementById("dwindow").style.height=initialheight
+}
+document.getElementById("dwindow").style.left=ns6? window.pageXOffset+"px" : iecompattest().scrollLeft+"px"
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset+"px" : iecompattest().scrollTop+"px"
+}
+
+function closeit(){
+document.getElementById("dwindow").style.display="none"
+}
+
+function stopdrag(){
+dragapproved=false;
+document.getElementById("dwindow").onmousemove=null;
+document.getElementById("dwindowcontent").style.display="" //extra
+}
+function loader()	{
+alert("::"+this.screen.width);
+}
+
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//new code starts here
+//-->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../images/shyam_style.css" rel="stylesheet" type="text/css">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable --> 
+</head>
+<body background="../images/bg_common_out.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="dwindow" style="position:absolute; cursor:hand; left:573px; top:216px; display:none; height: 230; background-image: url(../images/bg_basic.gif); layer-background-image:  url(../images/bg_basic.gif); width: 312; border: 1px none #000000;" onMousedown="initializedrag(event)" onMouseup="stopdrag()" onSelectStart="return false"> 
+  <div align="left"> 
+    <table width="312" border="0" cellpadding="0" cellspacing="0">
+      <tr valign="top"> 
+        <td colspan="2" background="../images/bg_ttl_shaym.gif"><img src="../images/transparent.gif" width="1" height="4"></td>
+      </tr>
+      <tr valign="top" background="../images/bg_basic.gif"> 
+        <td width="428"><img src="../images/transparent.gif" width="200" height="1"></td>
+        <td width="70"><img src="../images/icon_window_close.gif" width="42" height="10" vspace="2" onClick="closeit()"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="dwindowcontent" style="height:100%"> 
+    <iframe id="cframe" src="" width=100% height=100% frameborder="0"></iframe>
+  </div>
+</div>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/bg_common.gif">
+  <tr> 
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td valign="top"><table width="681" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="0%"><img src="../images/transparent.gif" width="1" height="20"></td>
+                <td width="3%"><img src="../images/transparent.gif" width="19" height="1"></td>
+                <td width="3%">---</td>
+                <td width="25%" class="breadCrumb"><a href="../home.htm" class="breadCrumb">You 
+                  are in Home</a> / <a href="../sml_screen.htm" class="breadCrumb"> 
+                  Small Screen</a> /</td>
+                <!-- InstanceBeginEditable name="breadCrumb" -->
+                <td width="45%" class="breadCrumb">Lost Leaves</td>
+                <!-- InstanceEndEditable --> 
+                <td width="22%" class="breadCrumb"><a name="0"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="../images/bg_topBlue.gif"><table width="780" border="0" cellpadding="0" cellspacing="0">
+              <tr valign="top"> 
+                <td width="111"><a href="../onmovies.htm"><img src="../images/nav_onmovie.gif" alt="On Movies" width="111" height="36" border="0"></a></td>
+                <td width="149"><a href="../sml_screen.htm"><img src="../images/nav_sspics.gif" alt="Small Screen Pics" width="149" height="36" border="0"></a></td>
+                <td width="80"><a href="../movies.htm"><img src="../images/nav_movie.gif" alt="Movies" width="80" height="36" border="0"></a></td>
+                <td width="80"><a href="../awards.htm"><img src="../images/nav_awards.gif" alt="Awards" width="80" height="36" border="0"></a></td>
+                <td width="110"><a href="../news.htm"><img src="../images/nav_news.gif" alt="In the News" width="110" height="36" border="0"></a></td>
+                <td width="85"><a href="../life_etc.htm"><img src="../images/nav_life.gif" alt="Life Etc" width="85" height="36" border="0"></a></td>
+                <td width="165"><a href="../show_goes.htm"><img src="../images/nav_show.gif" alt="The Show Goes on" width="165" height="36" border="0"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top"><table width="780" border="0" cellpadding="0" cellspacing="0">
+              <!-- InstanceBeginEditable name="theme_pics" -->
+              <tr valign="top"> 
+                <td width="222"><img src="../images/small_screen/img_leaves1.jpg" width="129" height="107"></td>
+                <td width="224"><img src="../images/small_screen/img_leaves2.jpg" width="119" height="107"></td>
+                <td width="266"><img src="../images/small_screen/img_leaves3.jpg" width="163" height="107"></td>
+                <td width="68"><img src="../images/img_smlscr4.jpg" width="123" height="107"></td>
+                <td width="68"><img src="../images/small_screen/img_leaves5.jpg" width="124" height="107"></td>
+                <td width="68"><img src="../images/small_screen/img_leaves6.jpg" width="122" height="107"></td>
+              </tr>
+              <!-- InstanceEndEditable --></table></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="../images/bg_ttl_shaym_inner.gif" class="iconTxt"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="40%"><img src="../images/ttl_shyamcom_inner.gif" width="315" height="21"></td>
+                <td width="47%"><img src="../images/ttl_smallscreen.gif" width="175" height="21"></td>
+                <td width="13%" class="txtBlack"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td width="50%"><a href="../home.htm" class="txtBlack">HOME<img src="../images/icon_home.gif" alt="Home" width="10" height="8" hspace="5" border="0"></a></td>
+                      <td width="50%"><a href="mailto:mail@shyamaprasad.com"><img src="../images/icon_mail.gif" alt="mail@shyamaprasad.com" width="23" height="9" border="0"></a></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td valign="top"><table width="780" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="1%"><img src="../images/transparent.gif" width="1" height="70"></td>
+                <td width="99%" align="center" valign="middle" class="txtBlack2"><a href="summer_main.htm" class="smallScr">A 
+                  Summer Vacation</a>&nbsp; &nbsp;|&nbsp;&nbsp; <a href="leaves_main.htm" class="smallScr">Lost 
+                  Leaves</a> &nbsp;|&nbsp; <a href="wedding_main.htm" class="smallScr">A 
+                  Marriage Proposal</a> &nbsp;|&nbsp; <a href="nose_blurb.htm" class="smallScr">The 
+                  World Famous Nose</a> &nbsp;|&nbsp; <a href="just_blurb.htm" class="smallScr">The 
+                  Just</a><br> <a href="lunar_blurb.htm" class="smallScr">The 
+                  Lunar</a> &nbsp;|&nbsp; <a href="bnw_blurb.htm" class="smallScr">In 
+                  Black and White</a> &nbsp;|&nbsp; <a href="equation_blurb.htm" class="smallScr">Equations</a> 
+                  &nbsp;|&nbsp; <a href="death_blurb.htm" class="smallScr">Death, 
+                  Be Not Proud</a> &nbsp;|&nbsp; <a href="sand_main.htm" class="smallScr">The 
+                  City of Sand</a> &nbsp;|&nbsp; <a href="healing_blurb.htm" class="smallScr">The 
+                  Rhythm of Healing</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr valign="top"> 
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="33%"><img src="../images/transparent.gif" width="1" height="30"></td>
+                <!-- InstanceBeginEditable name="title" -->
+                <td width="67%" valign="baseline" class="txtBlue1"><span class="txtPageNavMovie">PERUVAZHIYILE 
+                  KARIYILAKAL</span> &nbsp; Lost Leaves</td>
+                <!-- InstanceEndEditable --></tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" onmouseover="MM_displayStatusMsg('www.shyamaprasad.com');return document.MM_returnValue">
+              <tr> 
+                <td colspan="4" valign="top" class="breadCrumb"><img src="../images/transparent.gif" width="1" height="20"></td>
+              </tr>
+              <tr> <!-- InstanceBeginEditable name="Nav_left" --> 
+                <td width="30%" valign="top" class="shadowShyam"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="txtBlack1">
+                    <tr> 
+                      <td align="right" valign="top"><a href="leaves_main.htm" class="txtBlack1">Read 
+                        the Blurb</a></td>
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="top"><img src="../images/transparent.gif" width="1" height="10"></td>
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="top"><a href="leaves_mc.htm" class="txtBlack1">View the movie 
+                        Clip</a></td>
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="top"><img src="../images/transparent.gif" width="1" height="10"></td>
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="top"><a href="leaves_credits.htm" class="txtBlack1">Credits</a></td>
+                    </tr>
+                  </table></td>
+                <!-- InstanceEndEditable --> 
+                <td width="3%" align="right"><img src="../images/transparent.gif" width="22" height="8"></td>
+                <!-- InstanceBeginEditable name="blurb_content" -->
+                <td width="67%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top" class="txtBlue1">
+<p> Muraleedharan is 
+                          an influential officer in the Ministry of the state. 
+                          Once upon a time a political enthusiast, he's now comfortably 
+                          employed in the government services. A chance intervention 
+                          in a plea submitted by a grieving mother and daughter 
+                          throws him into a painful examination of his past.<br>
+                          <br>
+                          The girl's father and he were once brethren to a revolutionary 
+                          cause. Growing up together in an idyllic village in 
+                          Kerala, theirs was an unlikely kinship - he the son 
+                          of the temple priest, and Gopi, a notary's son. A kinship 
+                          that blossomed into their youth and brought them shoulder 
+                          to shoulder in their political concerns.<br>
+                          <br>
+                          Amid upheavals and opportunism, they struggle to find 
+                          their moorings in the ideals that once inspired them 
+                          - with tragic implications for their friendship. A disheartened 
+                          Murali opts out of the power game. Marriage, children, 
+                          a cosy domestic life, and a smug job in the services 
+                          - Murali's priorities are in contrast to Gopi's - who 
+                          pursues a shining career as journalist. A contented 
+                          life eludes him though, as he drifts dangerously into 
+                          alcoholism. From a distance, Murali watches helplessly 
+                          as his one time soul mate is ruined by drink and bad 
+                          company. Their meetings now are few and far in between 
+                          - at press conferences, journalist meetings and parties.<br>
+                          <br>
+                          Years later on a surprise visit, Gopi cuts a sorry figure 
+                          before his longtime friend and family. 'My daughter 
+                          sings well; you must come home one day', says Gopi in 
+                          parting. With half promises of meeting again, they bid 
+                          their goodbyes.<br>
+                          <br>
+                          Many years later, news of Gopi's passing reaches Murali. 
+                          In a godforsaken nook, somewhere in the high ranges 
+                          by a wayside caf&eacute;, Gopi is found dead. He had 
+                          lain unattended in his final moments, stricken by pain, 
+                          awaiting help.<br>
+                          As the narrative moves beyond this tragic retrospection, 
+                          Murali is left with an indelible image of his friend 
+                          - the bright, luminous eyes of his daughter, helpless 
+                          in askance, in grief.<br>
+                      </td>
+                      <td valign="top" class="txtBlack1"><img src="../images/transparent.gif" width="80" height="1"></td>
+                    </tr>
+                    <tr> 
+                      <td class="txtBlack1"> <p>&nbsp;</p>
+                        <p>&nbsp; </p></td>
+                      <td class="txtBlack1">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                <!-- InstanceEndEditable --></tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle" background="../images/bg_topBlue.gif" class="footer"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer">
+        <tr> 
+          <td width="2%"><img src="../images/transparent.gif" width="1" height="30"></td>
+          <td width="81%" valign="middle">&copy; 2004 All Rights Reserved Shyamaprasad.com</td>
+          <td width="17%" valign="middle" class="feedback">&nbsp; </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+<script name="Used by MM_checkPlugin" language="javascript">
+<!--
+with (navigator) if (appName.indexOf('Microsoft')!=-1 && appVersion.indexOf('Mac')==-1) document.write(''+
+'<scr'+'ipt language="VBScript">\nOn error resume next\n'+
+'MM_dir = IsObject(CreateObject("SWCtl.SWCtl.1"))\n'+
+'MM_flash = NOT IsNull(CreateObject("ShockwaveFlash.ShockwaveFlash"))\n</scr'+'ipt>');
+//-->
+</script>
+<!-- InstanceEnd --></html>

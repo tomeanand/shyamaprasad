@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<Browne>
+	<videolist>
+		<video id="1" title="Arisia" path="Arisiabrown001.flv"><![CDATA[]]></video>
+		<video id="2" title="Axe Army Card" path="Axe Army Cardbrown001.flv"><![CDATA[ ]]></video>
+		<video id="3" title="Axe Change" path="Axe Changebrown001.flv"><![CDATA[]]></video>
+		<video id="4" title="Bajaj Wave" path="Bajaj Wavebrown001.flv"><![CDATA[]]></video>
+		<video id="5" title="Hutch Jokes" path="Hutch Jokesbrown001.flv"><![CDATA[]]></video>
+		<video id="6" title="Hutch Ringtones" path="Hutch Ringtonesbrown001.flv"><![CDATA[]]></video>
+		<video id="7" title="Integriti" path="Integritibrown001.flv"><![CDATA[]]></video>
+		<video id="8" title="Kirloskar" path="Kirloskarbrown001.flv"><![CDATA[]]></video>
+		<video id="9" title="Parachute" path="Parachutebrown001.flv"><![CDATA[]]></video>
+		<video id="10" title="Serovo 4T" path="Serovo 4tbrown001.flv"><![CDATA[]]></video>
+		<video id="11" title="Tata Salt" path="Tata Saltbrown001.flv"><![CDATA[]]></video>
+		<video id="12" title="Times Now" path="Times Nowbrown001.flv"><![CDATA[]]></video>
+		<video id="13" title="Hutch" path="Arisiabrown001.flv"><![CDATA[]]></video>
+
+	</videolist>
+	
+	<brownelist>
+		<video id="1" title="BNHS Muslim" path="BNHS Muslim.flv"></video>
+		<video id="2" title="Close-up" path="Close-up.flv"></video>
+		<video id="3" title="Gelusil Foodball1" path="Gelusil Foodball1.flv"></video>
+		<video id="4" title="Gelusil Pub" path="Gelusil Pub.flv"></video>
+		<video id="5" title="Godrej" path="Godre.flv"></video>
+		<video id="6" title="HLL Axe" path="HLL Axe1.flv"></video>
+		<video id="7" title="HLL Shirt" path="HLL Shirt.flv"></video>
+		<video id="8" title="ILFS Copycat" path="ILFS Copycat.flv"></video>
+		<video id="9" title="Paanch" path="Paanch.flv"></video>
+		<video id="10" title="Pepsodent" path="Pepsodent1.flv"></video>
+		<video id="11" title="Population" path="Population.flv"></video>
+	</brownelist>
+	
+	<imagelist>
+		<image id="1" path="001.jpg"><![CDATA[Lpsum dolor sit amet, consectetuer adipiscing el]]></image>
+		<image id="2" path="002.jpg"><![CDATA[isi non eros. Morbi euismod, di]]></image>
+		<image id="3" path="003.jpg"><![CDATA[t, gravida in, hendrerit vel, he]]></image>
+		<image id="4" path="004.jpg"><![CDATA[sum dolor sit amet, consec]]></image>
+		<image id="5" path="005.jpg"><![CDATA[uada nisi non eros. Morbi euismod]]></image>
+		<image id="6" path="006.jpg"><![CDATA[sit amet, consectetuer ad]]></image>
+		<image id="7" path="007.jpg"><![CDATA[aecenas eget lorem. Pellentesque]]></image>
+		<image id="8" path="008.jpg"><![CDATA[ravida in, hendrerit vel, hendre]]></image>
+		<image id="9" path="009.jpg"><![CDATA[nisi non eros. Morbi euismod, diam ]]></image>
+		<image id="10" path="010.jpg"><![CDATA[dolor sit amet, consectetuer adipiscing elit. Fus]]></image>
+	</imagelist>
+	
+	<firstPlay></firstPlay>
+	<firstLoad></firstLoad>
+	<path>assets/video/</path>
+	<shadow>false</shadow>
+	
+</Browne>
