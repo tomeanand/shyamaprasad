@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Shyamaprasad.com :: Movies - Agnisakshi</title>
+<script>
+
+var dragapproved=false
+var minrestore=0
+var initialwidth,initialheight
+var ie5=document.all&&document.getElementById
+var ns6=document.getElementById&&!document.all
+
+function iecompattest(){
+return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function drag_drop(e){
+if (ie5&&dragapproved&&event.button==1){
+document.getElementById("dwindow").style.left=tempx+event.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+event.clientY-offsety+"px"
+}
+else if (ns6&&dragapproved){
+document.getElementById("dwindow").style.left=tempx+e.clientX-offsetx+"px"
+document.getElementById("dwindow").style.top=tempy+e.clientY-offsety+"px"
+}
+}
+
+function initializedrag(e){
+offsetx=ie5? event.clientX : e.clientX
+offsety=ie5? event.clientY : e.clientY
+document.getElementById("dwindowcontent").style.display="none" //extra
+tempx=parseInt(document.getElementById("dwindow").style.left)
+tempy=parseInt(document.getElementById("dwindow").style.top)
+
+dragapproved=true
+document.getElementById("dwindow").onmousemove=drag_drop
+}
+
+function loadwindow(url,width,height){
+if (!ie5&&!ns6)
+window.open(url,"","width=width,height=height,scrollbars=0")
+else{
+var int_left;
+var int_top;
+if(screen.width == 800)	{
+int_left = 20
+int_top = 60
+}
+if(screen.width == 1024)	{
+int_left = 60
+int_top = 140
+}
+if(screen.width == 1152)	{
+int_left = 100
+int_top = 180
+}
+
+document.getElementById("dwindow").style.display=''
+document.getElementById("dwindow").style.width=initialwidth=width+"px"
+document.getElementById("dwindow").style.height=initialheight=height+"px"
+document.getElementById("dwindow").style.left=int_left*2+"px" //initial left
+//document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+30+"px"
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset*1+30+"px" : iecompattest().scrollTop*1+int_top+"px"
+document.getElementById("cframe").src=url
+}
+}
+
+function maximize(){
+if (minrestore==0){
+minrestore=1 //maximize window
+document.getElementById("maxname").setAttribute("src","restore.gif")
+document.getElementById("dwindow").style.width=ns6? window.innerWidth-20+"px" : iecompattest().clientWidth+"px"
+document.getElementById("dwindow").style.height=ns6? window.innerHeight-20+"px" : iecompattest().clientHeight+"px"
+}
+else{
+minrestore=0 //restore window
+document.getElementById("maxname").setAttribute("src","max.gif")
+document.getElementById("dwindow").style.width=initialwidth
+document.getElementById("dwindow").style.height=initialheight
+}
+document.getElementById("dwindow").style.left=ns6? window.pageXOffset+"px" : iecompattest().scrollLeft+"px"
+document.getElementById("dwindow").style.top=ns6? window.pageYOffset+"px" : iecompattest().scrollTop+"px"
+}
+
+function closeit(){
+document.getElementById("cframe").src='windows/close.htm'
+document.getElementById("dwindow").style.display="none"
+}
+
+function stopdrag(){
+dragapproved=false;
+document.getElementById("dwindow").onmousemove=null;
+document.getElementById("dwindowcontent").style.display="" //extra
+}
+function loader()	{
+alert("::"+this.screen.width);
+}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="images/shyam_style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.txtMovie {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #003366;
+	text-decoration: none;
+	line-height: 10px;
+}
+-->
+</style>
+</head>
+<body background="images/bg_common_out.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="dwindow" style="position:absolute; cursor:hand; left:573px; top:216px; display:none; height: 230; background-image: url(images/bg_basic.gif); layer-background-image: url(images/bg_basic.gif); width: 312; border: 1px none #000000;" onMousedown="initializedrag(event)" onMouseup="stopdrag()" onSelectStart="return false"> 
+  <div align="left"> 
+    <table width="312" border="0" cellpadding="0" cellspacing="0">
+      <tr valign="top"> 
+        <td colspan="2" background="images/bg_ttl_shaym.gif"><img src="images/transparent.gif" width="1" height="4"></td>
+      </tr>
+      <tr valign="top" background="images/bg_basic.gif"> 
+        <td width="428"><img src="images/transparent.gif" width="200" height="1"></td>
+        <td width="70"><img src="images/icon_window_close.gif" width="42" height="10" vspace="2" onClick="closeit()"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="dwindowcontent" style="height:100%"> 
+    <iframe id="cframe" src="" width=100% height=100% frameborder="0"></iframe>
+  </div>
+</div>
+<table width="780" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bg_common.gif">
+  <tr> 
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td valign="top"><table width="500" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="0%"><img src="images/transparent.gif" width="1" height="20"></td>
+                <td width="4%"><img src="images/transparent.gif" width="19" height="1"></td>
+                <td width="5%">---</td>
+                <td width="91%" class="breadCrumb"><a href="home.htm" class="breadCrumb">You 
+                  are in Home</a> / Movies / Agnisakshi</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="images/bg_topBlue.gif"><table width="780" border="0" cellpadding="0" cellspacing="0">
+              <tr valign="top"> 
+                <td width="111"><a href="onmovies.htm"><img src="images/nav_onmovie.gif" alt="On Movies" width="111" height="36" border="0"></a></td>
+                <td width="149"><a href="sml_screen.htm"><img src="images/nav_sspics.gif" alt="Small Screen Pics" width="149" height="36" border="0"></a></td>
+                <td width="80"><a href="movies.htm"><img src="images/nav_movie.gif" alt="Movies" width="80" height="36" border="0"></a></td>
+                <td width="80"><a href="awards.htm"><img src="images/nav_awards.gif" alt="Awards" width="80" height="36" border="0"></a></td>
+                <td width="110"><a href="news.htm"><img src="images/nav_news.gif" alt="In the News" width="110" height="36" border="0"></a></td>
+                <td width="85"><a href="life_etc.htm"><img src="images/nav_life.gif" alt="Life Etc" width="85" height="36" border="0"></a></td>
+                <td width="165"><a href="show_goes.htm"><img src="images/nav_show.gif" alt="The Show Goes on" width="165" height="36" border="0"></a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top"><table width="780" border="0" cellpadding="0" cellspacing="0">
+              <tr valign="top"> 
+                <td width="222"><table width="780" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top"> 
+                      <td width="188"><img src="images/movies/img_movie_agni01.jpg" width="132" height="107"></td>
+                      <td width="190"><img src="images/movies/img_movie_agni02.jpg" width="138" height="107"></td>
+                      <td width="10"><img src="images/movies/img_movie_agni03.jpg" width="169" height="107"></td>
+                      <td width="273"><img src="images/movies/img_movie_agni04.jpg" width="139" height="107"></td>
+                      <td width="57"><img src="images/movies/img_movie_agni05.jpg" width="105" height="107"></td>
+                      <td width="62"><img src="images/movies/img_movie_agni06.jpg" width="97" height="107"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="images/bg_ttl_shaym_inner.gif" class="iconTxt"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="40%"><img src="images/ttl_shyamcom_inner.gif" width="315" height="21"></td>
+                <td width="47%"><img src="images/ttl_movies.gif" width="84" height="21"></td>
+                <td width="13%" class="txtBlack"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td width="50%"><a href="home.htm" class="txtBlack">HOME<img src="images/icon_home.gif" alt="Home" width="10" height="8" hspace="5" border="0"></a></td>
+                      <td width="50%"><a href="mailto:shyamaprasadr@gmail.com"><img src="images/icon_mail.gif" alt="shyamaprasadr@gmail.com" width="23" height="9" border="0"></a></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td valign="top"><table width="780" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="1%"><img src="images/transparent.gif" width="1" height="70"></td>
+                <td width="99%" align="center" valign="middle" class="txtBlack2">Agnisakshi&nbsp; 
+                  &nbsp;|&nbsp;&nbsp; <a href="movies_2.htm" class="smallScr">Kallu 
+                  Kondoru Pennu</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr valign="top"> 
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="33%">&nbsp;</td>
+                <td width="67%" class="txtBlue1"><span class="txtPageNavMovie">AGNISAKSHI 
+                  &nbsp;</span>With Fire as Witness</td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td valign="top"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td colspan="3"><img src="images/transparent.gif" width="1" height="10"></td>
+              </tr>
+              <tr> 
+                <td width="30%" align="right" valign="top" class="shadowShyam"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="txtBlack1">
+                    <tr> 
+                      <td align="right" valign="top"><img src="images/movies/img_agni_01.jpg" width="123" height="84"></td>
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="top"><img src="images/movies/img_agni_02.jpg" width="123" height="78"></td>
+                    </tr>
+                  </table></td>
+                <td width="3%"><img src="images/transparent.gif" width="21" height="1"></td>
+                <td width="67%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top"> 
+                      <td width="98%" class="txtBlue1"><p> <em>&quot; Agnisakshi 
+                          is more than a portrayal of the period and the life 
+                          of the Namboothiris of Kerala. It is more than the story 
+                          of the transformation of a society caught between two 
+                          worlds - one dead and the other yet to be born. It is 
+                          more than the struggle between established values and 
+                          change. It is more than the conflict between desire 
+                          and duty. It is the story of every man who searches 
+                          for meaning in relationships within the framework that 
+                          society dictates in every age.&quot;<strong> </strong></em><strong><br>
+                          <br>
+                          Synopsis<br>
+                          </strong><br>
+                          With the God of Fire as principal witness, Unni accepts 
+                          Devaki as his wife and brings her into the fold of his 
+                          Namboothiri illam.<br>
+                          <br>
+                          Bound by the plethora of traditional beliefs, customs 
+                          and rituals that constitute life within four walls of 
+                          the joint family, Unni is unable to be the husband that 
+                          he would have liked to be. Yet, they understand and 
+                          love each other immensely.<br>
+                          <br>
+                          Guarded by the fortress of tradition, the family remains 
+                          oblivious to the winds of change sweeping through society. 
+                          Though Unni is aware, he shuts the door to everything 
+                          that his family will never be able to comprehend or 
+                          accept.<br>
+                          <br>
+                          But Devaki, who is essentially of a different mould, 
+                          longs to step out into the world - and is finally forced 
+                          to do so.<br>
+                          Set in early 1930&quot;s , the story develops within 
+                          four walls of a Namboothiri Illam, in the South Indian 
+                          State of Kerala, against the backdrop of the struggle 
+                          for freedom from the British rule.<br>
+                          <br>
+                          The film opens in Haridwar, a holy city, where Thankam, 
+                          Unni's cousin , has come to immerse Unni's ashes in 
+                          the Ganga and trace Devaki, who now is an ascetic. The 
+                          story is revealed through the reminiscences of Thankam, 
+                          a mute spectator who is caught between these characters 
+                          and the complexities of their relationship - complexities 
+                          of their relationship- complexities that can never be 
+                          relegated to the realms of right and wrong.<br>
+                          <br>
+                          &nbsp;- <a href="docs/Agnisakshi_Related_Study.zip" class="smallScr">Related 
+                          Study</a><br>
+                          <br>
+                          <strong>Cast</strong><br>
+                          Rajit Kapur, Sobhana, Srividya, Praveena, Madhupal, 
+                          Madambu</p>
+                        <p>Based on the novel by<strong> Lalithambika Antharjanam<br>
+                          Camera</strong> Alagappan<br>
+                          <strong>Editing</strong> Bina<br>
+                          <strong>Sound</strong> Krishanunni, Hussain<br>
+                          <strong>Art Direction</strong> Premachandran<br>
+                          <strong>Executive Producers</strong> Dr.Gautham Babu, 
+                          Dr. Soma Prasad<br>
+                          <strong>Chief Producer</strong> V V Babu<br>
+                          <strong>Screenplay &amp; Direction</strong> Shyamaprasad<br>
+                          <br>
+                          A Srishti Films Production</p>
+                        <table border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+                          <tr valign="top" background="images/bg_common_out.gif"> 
+                            <td><a href="javascript:loadwindow('windows/popup_agni_07.htm',312,230)"><img src="images/popups/popup_ag_007.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_03.htm',312,230)"><img src="images/popups/popup_ag_003.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_06.htm',312,230)"><img src="images/popups/popup_ag_006.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_11.htm',312,230)"><img src="images/popups/popup_ag_011.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_02.htm',312,230)"><img src="images/popups/popup_ag_002.jpg" width="75" height="49" border="0"></a></td>
+                          </tr>
+                          <tr valign="top" background="images/bg_common_out.gif"> 
+                            <td><a href="javascript:loadwindow('windows/popup_agni_01.htm',312,230)"><img src="images/popups/popup_ag_001.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_08.htm',312,230)"><img src="images/popups/popup_ag_008.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_12.htm',312,230)"><img src="images/popups/popup_ag_012.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_09.htm',312,230)"><img src="images/popups/popup_ag_009.jpg" width="75" height="49" border="0"></a></td>
+                            <td><a href="javascript:loadwindow('windows/popup_agni_05.htm',312,230)"><img src="images/popups/popup_ag_005.jpg" width="75" height="49" border="0"></a></td>
+                          </tr>
+                        </table>
+                        <table width="229" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+                          <tr valign="top" background="images/bg_common_out.gif"> 
+                            <td width="75"><a href="javascript:loadwindow('windows/popup_agni_04.htm',312,230)"><img src="images/popups/popup_ag_004.jpg" width="75" height="49" border="0"></a></td>
+                            <td width="75"><a href="javascript:loadwindow('windows/popup_agni_10.htm',312,230)"><img src="images/popups/popup_ag_010.jpg" width="75" height="49" border="0"></a></td>
+                            <td width="75" align="center" valign="middle" class="txtMovie"><a href="javascript:loadwindow('windows/popupMovie_agni.htm',315,250)" class="txtMovie">View 
+                              <br>
+                            Movie Clip</a> </td>
+                          </tr>
+                        </table>
+                        <br> 
+                        <strong>Awards</strong><br> <strong><br>
+                        National Award</strong> 1998 for best regional film <br> 
+                        <br> <strong>Kerala State Awards</strong> <br>
+                        Best Director - Shyamaprasad<br>
+                        Best Actor - Rajit Kapur<br>
+                        Best Supporting Actress - Praveena<br>
+                        Best Film - Agnisaakshi<br>
+                        Best Cameraman - Alagappan <br>
+                        Best Sound Engineer - Krishnanunni,Hussain <br>
+                        Best Makeupman - P.Mani, Vikram Gaekwad <br>
+                        Best Dubbing Artist - Murali Menon , Vennmani Vishnu <br>
+                        Best Processing Lab - Gemini Lab 
+                        <p><strong>Kerala State Critics Awards </strong><br>
+                          Best Film - Agnisaakshi <br>
+                          Best Director - Shyama Prasad <br>
+                          Best Lyrics - Kaithaprom<br>
+                          Best Actress - Sobhana<br>
+                          Best Cameraman - Alagappan <br>
+                          Best Art Director - Premachandran <br>
+                          <br>
+                          <strong>Aravindan Puraskar</strong> 1998 for best director<br>
+                          <br>
+                          <strong>Asianet Special Jury Award</strong> 1998 for 
+                          best film (pre-release)<br>
+                          <strong>Asianet Award</strong> 1999 for best film<br>
+                          <br>
+                          <strong>Filmfare Award</strong> 1999 for best Malayalam 
+                          Film <br>
+                          <br>
+                          <strong>Gollapudi Srinivas Memorial Award</strong> 1998 
+                          for best director</p>
+                        <br></td>
+                      <td width="2%" class="txtBlue1"><img src="images/transparent.gif" width="80" height="1"> 
+                    </tr>
+                    <tr valign="top"> 
+                      <td class="txtBlack1"><p>&nbsp;</p>
+                        <p>&nbsp;</p></td>
+                      <td class="txtBlack1"> <p>&nbsp;</p></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td align="center" valign="middle" background="images/bg_topBlue.gif" class="footer"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer">
+        <tr> 
+          <td><img src="images/transparent.gif" width="1" height="30"></td>
+          <td>&copy; 2004 All Rights Reserved Shyamaprasad.com</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5670090-1");
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

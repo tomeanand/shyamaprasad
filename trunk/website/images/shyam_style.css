@@ -1,0 +1,272 @@
+.breadCrumb {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #757575;
+	text-decoration: none;
+
+}
+.txtHome {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #18505D;
+	text-decoration: none;
+
+}
+.txtBlack {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+
+}
+.footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #339999;
+	text-decoration: none;
+	letter-spacing: 1px;
+
+
+}
+.iconTxt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+	letter-spacing: -1px;
+	text-decoration: none;
+
+}
+.txtBlack2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.23px;
+	line-height: 17px;
+}
+
+.shadowShyam {
+	background-image: url(img_Newrepeat_shyam_shadow.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+
+}
+.txtBlack1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.24pt;
+	line-height: 14px;
+	text-align: left;
+}
+.txtBlue1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #18505D;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.24pt;
+	line-height: 16px;
+
+
+
+}
+a.news:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #18505D;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: .24pt;
+}
+a.news:visited { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #757575;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: .24pt;
+}
+a.news:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: .24pt;
+}
+.txtWhite1 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: .24pt;
+}
+.txtNews {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #18505D;
+	text-decoration: none;
+	text-align: justify;
+
+}
+
+a.smallScr:link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.23px;
+	line-height: 17px;
+}
+a.smallScr:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #757575;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.23px;
+	line-height: 17px;
+}
+a.smallScr:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	word-spacing: normal;
+	letter-spacing: 0.23px;
+	line-height: 17px;
+	text-decoration: underline;
+
+}
+.txtBlackItalic {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.24pt;
+	line-height: 16px;
+	font-style: italic;
+
+}
+.pageNavi {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+.txtNewsHead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.23pt;
+	line-height: 16px;
+	font-weight: bold;
+
+}
+.txtNewsSubHead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	line-height: 13px;
+	letter-spacing: normal;
+
+}
+.feedback {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #C9C7B0;
+	text-decoration: none;
+
+}
+.txtPageNavMovie {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #18505D;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.4pt;
+	line-height: 16px;
+	font-weight: bold;
+}
+.shadowShyamBottom {
+
+	background-image: url(img_repeat_shyam_shadowbottom.jpg);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+.subScript {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	color: #18505D;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.24pt;
+	line-height: 16px;
+}
+.txtBluepageNav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: 0.24pt;
+	line-height: 16px;
+	font-weight: normal;
+
+}
+.txtHomebIG {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 21px;
+	color: #18505D;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: .5pt;
+	line-height: 15px;
+
+
+
+}
+.txtHomebIG1 {
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #18505D;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 3px;
+	line-height: 23px;
+}
+.txtHomeNew {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #18505D;
+	text-decoration: none;
+	text-align: justify;
+	line-height: 10px;
+
+}
+.txtBlackHome {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	word-spacing: normal;
+	letter-spacing: normal;
+	line-height: normal;
+
+}
